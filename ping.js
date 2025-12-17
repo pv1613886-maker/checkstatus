@@ -2,7 +2,7 @@ const http = require('http');
 
 const domains = [
     'https://9xanime.fun',
-    'https://example.com'
+    'https://checkstatus-4pot.onrender.com'
 ];
 
 const intervalMs = 25 * 1000; // 25 seconds
