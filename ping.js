@@ -1,7 +1,4 @@
-/**
- * Domain Pinger Script
- * Pings specified domains every 25 seconds to keep them active.
- */
+const http = require('http');
 
 const domains = [
     'https://9xanime.fun',
@@ -9,6 +6,17 @@ const domains = [
 ];
 
 const intervalMs = 25 * 1000; // 25 seconds
+const port = process.env.PORT || 3000;
+
+// Simple HTTP server to satisfy Render's port requirement
+const server = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Pinger is active\n');
+});
+
+server.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+});
 
 // Global error handling to prevent the script from stopping
 process.on('uncaughtException', (error) => {
