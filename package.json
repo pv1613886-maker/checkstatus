@@ -1,0 +1,15 @@
+{
+  "name": "uptime-pinger",
+  "version": "1.0.0",
+  "description": "A simple Node.js script to ping domains every 25 seconds.",
+  "main": "ping.js",
+  "scripts": {
+    "start": "node ping.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
